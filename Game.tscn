@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://BulletHellSpawner.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Images/bullet2.png" type="Texture" id=4]
 [ext_resource path="res://Images/bullet3.png" type="Texture" id=5]
 [ext_resource path="res://Detector.tscn" type="PackedScene" id=6]
+[ext_resource path="res://perf_hud.tscn" type="PackedScene" id=7]
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 1 )
@@ -35,5 +36,8 @@ position = Vector2( -292, -129.836 )
 
 [node name="Detector2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 3.99997, -105.836 )
+
+[node name="PerfHud" parent="." instance=ExtResource( 7 )]
+
 [connection signal="timeout" from="StartTimer" to="." method="_on_StartTimer_timeout"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://slow_way/bullet_hell_spawner_slow_way.gd" type="Script" id=1]
+
+[node name="BulletHellpSpawnerSlowWay" type="Node2D"]
+script = ExtResource( 1 )
